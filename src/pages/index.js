@@ -1,4 +1,4 @@
-import RootLayout from "@/components/Layouts/RootLayout";
+// import RootLayout from "@/components/Layouts/RootLayout";
 
 const HomePage = () => {
   return (
@@ -10,6 +10,6 @@ const HomePage = () => {
 
 export default HomePage;
 
-HomePage.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
-};
+// HomePage.getLayout = function getLayout(page) {
+//   return <RootLayout>{page}</RootLayout>;
+// };
