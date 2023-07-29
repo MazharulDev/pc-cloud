@@ -3,6 +3,8 @@
 import Card from "@/components/UI/Card";
 
 const HomePage = ({ allProducts }) => {
+  // const randomProduct = Math.floor(Math.random() * allProducts?.data?.length);
+  // console.log(randomProduct);
   return (
     <div>
       <div>
@@ -11,7 +13,7 @@ const HomePage = ({ allProducts }) => {
         </h2>
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 my-10">
-        {allProducts?.data?.map((product) => (
+        {allProducts?.data?.slice(0, 6).map((product) => (
           <Card key={product._id} product={product} />
         ))}
       </div>

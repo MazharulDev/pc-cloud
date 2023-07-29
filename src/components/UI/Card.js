@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Card = ({ product }) => {
-  // console.log(product);
+  console.log(product);
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center ">
       <div className="container">
@@ -28,7 +28,7 @@ const Card = ({ product }) => {
                   </button>
                 </div>
                 <img
-                  src="https://i.ibb.co/r5RSTGR/pc.jpg"
+                  src={product.img}
                   alt="Just a flower"
                   className=" w-full   object-fill  rounded-2xl"
                 />
@@ -45,20 +45,32 @@ const Card = ({ product }) => {
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
 
-                    <span className="mr-2 text-gray-400">unknown</span>
+                    <span className="mr-2 text-gray-400">{product.rating}</span>
                   </div>
                   <div className="flex items-center w-full justify-between min-w-0 ">
                     <h2 className="text-lg mr-auto cursor-pointer text-gray-200 hover:text-purple-500 truncate ">
-                      This is ram
+                      {product.name}
                     </h2>
 
                     <div className="flex items-center bg-blue-600 text-white text-xs px-2 py-1 ml-3 rounded-lg">
-                      Author: <span className="font-bold ml-1">Mazharul</span>
+                      Category:{" "}
+                      <span className="font-bold ml-1">{product.category}</span>
                     </div>
                   </div>
                 </div>
-                <div className="text-xl text-white font-semibold mt-1">
-                  $200
+
+                <div class="flex-1 inline-flex items-center ">
+                  <span class="text-secondary whitespace-nowrap mr-3">
+                    Status
+                  </span>
+                  <div class="cursor-pointer text-gray-400 ">
+                    <span class="hover:text-purple-500 p-1 py-0">
+                      {product.status}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-xl text-white font-semibold">
+                  $ {product.price}
                 </div>
 
                 <div className="flex space-x-2 text-sm font-medium justify-start mt-3">
