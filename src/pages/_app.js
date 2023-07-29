@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
   return (
     <SessionProvider session={pageProps.session}>
       <Navbar />
-      <div className="h-[100vh]">
+      <div>
         <Component {...pageProps} />
       </div>
       <Footer />
