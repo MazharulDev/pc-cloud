@@ -3,6 +3,7 @@
 import Card from "@/components/UI/Card";
 import { useAppDispatch } from "@/redux/hooks";
 import { avarageRating } from "@/redux/product/productSlice";
+import Link from "next/link";
 
 const HomePage = ({ allProducts }) => {
   const dispatch = useAppDispatch();
@@ -20,6 +21,33 @@ const HomePage = ({ allProducts }) => {
         {allProducts?.data?.slice(0, 6).map((product) => (
           <Card key={product._id} product={product} />
         ))}
+      </div>
+      <div className="container mx-auto my-5">
+        <div className="flex justify-center">
+          <ul className="menu menu-vertical lg:menu-horizontal bg-blue-600 rounded-box text-white">
+            <li>
+              <Link href="/category/processor">CPU / Processor</Link>
+            </li>
+            <li>
+              <Link href="/category/motherboard">Motherboard</Link>
+            </li>
+            <li>
+              <Link href="/category/ram">RAM</Link>
+            </li>
+            <li>
+              <Link href="/category/supply">Power Supply Unit</Link>
+            </li>
+            <li>
+              <Link href="/category/storage">Storage Device</Link>
+            </li>
+            <li>
+              <Link href="/category/monitor">Monitor</Link>
+            </li>
+            <li>
+              <Link href="/category/others">Others</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
