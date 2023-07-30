@@ -1,8 +1,9 @@
+import { useAppSelector } from "@/redux/hooks";
 import Image from "next/image";
 import React from "react";
 
 const ProductDetailPage = ({ product }) => {
-  console.log(product.data);
+  const { sumRating } = useAppSelector((state) => state.products);
   const {
     img,
     name,
@@ -11,7 +12,6 @@ const ProductDetailPage = ({ product }) => {
     price,
     keyFeature,
     rating,
-    averageRating,
     description,
     reviews,
   } = product?.data;
@@ -39,7 +39,7 @@ const ProductDetailPage = ({ product }) => {
             <p className="mt-2">{keyFeature}</p>
           </div>
           <h2 className="font-bold text-lg mt-4">Rating: {rating}</h2>
-          <h2>Avarage Rating: {averageRating}</h2>
+          <h2>Avarage Rating: {sumRating}</h2>
         </div>
       </div>
       <div>
