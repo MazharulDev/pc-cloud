@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = () => {
   const { data: session } = useSession();
@@ -32,25 +33,25 @@ const Navbar = () => {
                 <a>Categoris</a>
                 <ul className="p-2">
                   <li>
-                    <a>CPU / Processor</a>
+                    <Link href="/category/cpu">CPU / Processor</Link>
                   </li>
                   <li>
-                    <a>Motherboard</a>
+                    <Link href="/category/motherboard">Motherboard</Link>
                   </li>
                   <li>
-                    <a>RAM</a>
+                    <Link href="/category/ram">RAM</Link>
                   </li>
                   <li>
-                    <a>Power Supply Unit</a>
+                    <Link href="/category/supply">Power Supply Unit</Link>
                   </li>
                   <li>
-                    <a>Storage Device</a>
+                    <Link href="/category/storage">Storage Device</Link>
                   </li>
                   <li>
-                    <a>Monitor</a>
+                    <Link href="/category/monitor">Monitor</Link>
                   </li>
                   <li>
-                    <a>Others</a>
+                    <Link href="/category/other">Others</Link>
                   </li>
                 </ul>
               </li>
@@ -63,36 +64,44 @@ const Navbar = () => {
             PC-CLOUD
           </Link>
         </div>
+
+        <div className="dropdown dropdown-hover hidden lg:block">
+          <label tabIndex={0} className=" m-1">
+            <div className="flex items-center cursor-pointer">
+              <p>Categoris</p>
+              <RiArrowDropDownLine className="text-2xl" />
+            </div>
+          </label>
+          <ul
+            tabIndex={0}
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <Link href="/category/cpu">CPU / Processor</Link>
+            </li>
+            <li>
+              <Link href="/category/motherboard">Motherboard</Link>
+            </li>
+            <li>
+              <Link href="/category/ram">RAM</Link>
+            </li>
+            <li>
+              <Link href="/category/supply">Power Supply Unit</Link>
+            </li>
+            <li>
+              <Link href="/category/storage">Storage Device</Link>
+            </li>
+            <li>
+              <Link href="/category/monitor">Monitor</Link>
+            </li>
+            <li>
+              <Link href="/category/other">Others</Link>
+            </li>
+          </ul>
+        </div>
+
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li tabIndex={0}>
-              <details>
-                <summary>Categoris</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>CPU / Processor</a>
-                  </li>
-                  <li>
-                    <a>Motherboard</a>
-                  </li>
-                  <li>
-                    <a>RAM</a>
-                  </li>
-                  <li>
-                    <a>Power Supply Unit</a>
-                  </li>
-                  <li>
-                    <a>Storage Device</a>
-                  </li>
-                  <li>
-                    <a>Monitor</a>
-                  </li>
-                  <li>
-                    <a>Others</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
             <li>
               <Link href="/pcbuilder" className="btn btn-sm btn-primary ml-5">
                 PC Builder

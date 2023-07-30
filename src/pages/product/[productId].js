@@ -38,8 +38,8 @@ const ProductDetailPage = ({ product }) => {
             <p className="text-2xl font-bold mt-5">Key Features</p>
             <p className="mt-2">{keyFeature}</p>
           </div>
-          <h2 className="font-bold text-lg mt-4">Rating: {rating}</h2>
-          <h2>Avarage Rating: {sumRating}</h2>
+          <h2 className="font-bold text-lg mt-4">Rating: {rating}/5</h2>
+          <h2>Avarage Rating: {sumRating}/5</h2>
         </div>
       </div>
       <div>

@@ -53,7 +53,9 @@ const Card = ({ product }) => {
 
                     <div className="flex items-center bg-blue-600 text-white text-xs px-2 py-1 ml-3 rounded-lg">
                       Category:{" "}
-                      <span className="font-bold ml-1">{product.category}</span>
+                      <span className="font-bold ml-1 uppercase">
+                        {product.category}
+                      </span>
                     </div>
                   </div>
                 </div>

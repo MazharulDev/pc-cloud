@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { BiUserCircle } from "react-icons/bi";
-import { useSession, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 const profile = () => {
   const { data: session } = useSession();
   return (
-    <div className="">
+    <div className="h-[100vh]">
       <div className="text-center">
         <div>
           <div className="text-7xl mt-3 flex justify-center">
