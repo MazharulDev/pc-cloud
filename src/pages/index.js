@@ -5,10 +5,6 @@ import { useAppDispatch } from "@/redux/hooks";
 import { avarageRating } from "@/redux/product/productSlice";
 
 const HomePage = ({ allProducts }) => {
-  // const sumRating = allProducts?.data
-  //   ?.map((productRate) => parseInt(productRate.rating))
-  //   .reduce((a, b) => a + b);
-  // const avarageRating = (sumRating / allProducts?.data?.length).toFixed(1);
   const dispatch = useAppDispatch();
   dispatch(avarageRating(allProducts?.data));
   // const randomProduct = Math.floor(Math.random() * allProducts?.data?.length);

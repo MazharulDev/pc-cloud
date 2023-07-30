@@ -33,7 +33,7 @@ const Navbar = () => {
                 <a>Categoris</a>
                 <ul className="p-2">
                   <li>
-                    <Link href="/category/cpu">CPU / Processor</Link>
+                    <Link href="/category/processor">CPU / Processor</Link>
                   </li>
                   <li>
                     <Link href="/category/motherboard">Motherboard</Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
                     <Link href="/category/monitor">Monitor</Link>
                   </li>
                   <li>
-                    <Link href="/category/other">Others</Link>
+                    <Link href="/category/others">Others</Link>
                   </li>
                 </ul>
               </li>
@@ -77,7 +77,7 @@ const Navbar = () => {
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link href="/category/cpu">CPU / Processor</Link>
+              <Link href="/category/processor">CPU / Processor</Link>
             </li>
             <li>
               <Link href="/category/motherboard">Motherboard</Link>
@@ -95,7 +95,7 @@ const Navbar = () => {
               <Link href="/category/monitor">Monitor</Link>
             </li>
             <li>
-              <Link href="/category/other">Others</Link>
+              <Link href="/category/others">Others</Link>
             </li>
           </ul>
         </div>
