@@ -69,7 +69,7 @@ const Card = ({ product }) => {
                   </div>
                 </div>
                 <div className="text-xl text-white font-semibold">
-                  $ {product.price}
+                  &#2547; {product.price}
                 </div>
 
                 <div className="flex space-x-2 text-sm font-medium justify-start mt-3">
