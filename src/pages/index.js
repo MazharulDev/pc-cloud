@@ -3,6 +3,11 @@
 import Card from "@/components/UI/Card";
 
 const HomePage = ({ allProducts }) => {
+  // const sumRating = allProducts?.data
+  //   ?.map((productRate) => parseInt(productRate.rating))
+  //   .reduce((a, b) => a + b);
+  // const avarageRating = (sumRating / allProducts?.data?.length).toFixed(1);
+
   // const randomProduct = Math.floor(Math.random() * allProducts?.data?.length);
   // console.log(randomProduct);
   return (
