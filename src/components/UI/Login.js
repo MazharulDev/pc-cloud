@@ -9,7 +9,7 @@ const LoginPage = () => {
       <div
         onClick={() =>
           signIn("google", {
-            callbackUrl: "http://localhost:3000",
+            callbackUrl: "https://pc-cloud.vercel.app/",
           })
         }
         className="flex justify-center items-center gap-4 bg-slate-800 hover:bg-slate-900 p-3 rounded-lg text-white mb-4 cursor-pointer"
@@ -20,7 +20,7 @@ const LoginPage = () => {
       <div
         onClick={() =>
           signIn("github", {
-            callbackUrl: "http://localhost:3000",
+            callbackUrl: "https://pc-cloud.vercel.app/",
           })
         }
         className="flex justify-center items-center gap-4 bg-slate-800 hover:bg-slate-900 p-3 rounded-lg text-white cursor-pointer"
