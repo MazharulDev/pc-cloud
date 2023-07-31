@@ -56,7 +56,9 @@ const Navbar = () => {
                 </ul>
               </li>
               <li>
-                <button className="btn btn-sm btn-primary">PC Builder</button>
+                <Link href="/pcbuilder" className="btn btn-sm btn-primary ml-5">
+                  PC Builder
+                </Link>
               </li>
             </ul>
           </div>
