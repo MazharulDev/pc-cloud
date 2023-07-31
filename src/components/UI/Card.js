@@ -18,9 +18,9 @@ const Card = ({ product }) => {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                       />
                     </svg>
@@ -60,12 +60,12 @@ const Card = ({ product }) => {
                   </div>
                 </div>
 
-                <div class="flex-1 inline-flex items-center ">
-                  <span class="text-secondary whitespace-nowrap mr-3">
+                <div className="flex-1 inline-flex items-center ">
+                  <span className="text-secondary whitespace-nowrap mr-3">
                     Status
                   </span>
-                  <div class="cursor-pointer text-gray-400 ">
-                    <span class="hover:text-purple-500 p-1 py-0">
+                  <div className="cursor-pointer text-gray-400 ">
+                    <span className="hover:text-purple-500 p-1 py-0">
                       {product.status}
                     </span>
                   </div>
