@@ -2,6 +2,7 @@ import { addToCart } from "@/redux/cart/cartSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { toast } from "react-hot-toast";
 
 const SelectCard = ({ products }) => {
   const router = useRouter();
@@ -9,6 +10,7 @@ const SelectCard = ({ products }) => {
   const { img, name, category, status, price, rating } = products;
   const handleSelect = (product) => {
     dispatch(addToCart(product));
+    toast.success(`Selected ${product?.name}`);
     router.push("/pcbuilder");
   };
   return (

@@ -3,6 +3,7 @@ import { useAppSelector } from "@/redux/hooks";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { toast } from "react-hot-toast";
 
 const pcbuilder = () => {
   const { products } = useAppSelector((state) => state.product);
@@ -21,6 +22,9 @@ const pcbuilder = () => {
     (monitor) => monitor?.category === "monitor"
   );
   const others = products?.filter((others) => others?.category === "others");
+  const handleSubmit = () => {
+    toast.success("Pc Build Successfully");
+  };
   return (
     <div className="container mx-auto">
       <h2 className="text-2xl font-bold border-b border-slate-400 uppercase my-4">
@@ -174,7 +178,10 @@ const pcbuilder = () => {
           </div>
         ))}
         {products.length === 7 ? (
-          <button className="btn btn-primary w-full mt-8">
+          <button
+            onClick={handleSubmit}
+            className="btn btn-primary w-full mt-8"
+          >
             Complete Build
           </button>
         ) : (

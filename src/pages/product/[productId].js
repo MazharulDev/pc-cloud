@@ -65,7 +65,9 @@ export default ProductDetailPage;
 
 export const getServerSideProps = async (context) => {
   const { params } = context;
-  const res = await fetch(`http://localhost:5000/product/${params.productId}`);
+  const res = await fetch(
+    `https://pc-cloud-server.vercel.app/product/${params.productId}`
+  );
   const data = await res.json();
 
   return {

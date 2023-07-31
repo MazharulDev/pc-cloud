@@ -1,5 +1,6 @@
 // import RootLayout from "@/components/Layouts/RootLayout";
 
+import Banner from "@/components/UI/Banner";
 import Card from "@/components/UI/Card";
 import { useAppDispatch } from "@/redux/hooks";
 import { avarageRating } from "@/redux/product/productSlice";
@@ -12,7 +13,8 @@ const HomePage = ({ allProducts }) => {
   // console.log(randomProduct);
   return (
     <div>
-      <div>
+      <Banner />
+      <div className="mt-8">
         <h2 className="text-center text-4xl font-bold my-4">
           Feature Products
         </h2>
@@ -56,7 +58,7 @@ const HomePage = ({ allProducts }) => {
 export default HomePage;
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch("https://pc-cloud-server.vercel.app/products");
   const data = await res.json();
   return {
     props: {

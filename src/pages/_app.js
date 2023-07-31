@@ -4,6 +4,7 @@ import { store } from "@/redux/store";
 import "@/styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 import { Provider } from "react-redux";
+import { Toaster } from "react-hot-toast";
 
 export default function App({ Component, pageProps }) {
   // const getLayout = Component.getLayout || ((page) => page);
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
         <Navbar />
         <div>
           <Component {...pageProps} />
+          <Toaster />
         </div>
         <Footer />
       </SessionProvider>
